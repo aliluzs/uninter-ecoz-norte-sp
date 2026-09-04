@@ -103,6 +103,7 @@ header p {
     padding: 1.8rem;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    margin-bottom: 2rem;
 }
 
 .bloco-suave {
@@ -318,11 +319,7 @@ header p {
     content: "";
     flex: 1;
     height: 1px;
-    background: linear-gradient(
-        90deg,
-        rgba(204, 102, 0, 0.3),
-        transparent
-    );
+    background: linear-gradient(90deg, rgba(204, 102, 0, 0.3), transparent);
     margin-left: 1rem;
 }
 
@@ -360,14 +357,18 @@ header p {
     border-style: solid;
 }
 
-/* --- ESCURECIMENTO HARMONIOSO DO GOOGLE FORMS --- */
+/* --- ESCURECIMENTO HARMONIOSO DO GOOGLE FORMS (NO PC) --- */
 .form-container iframe {
     width: 100%;
     border: none;
     border-radius: 10px;
-    /* Inverte as cores e ajusta o contraste/matiz para combinar com o Dark Mode */
     filter: invert(90%) hue-rotate(180deg) brightness(0.95) contrast(90%);
     transition: filter 0.3s ease;
+}
+
+/* ESCONDE O BOTÃO MOBILE NO COMPUTADOR */
+.form-mobile-link {
+    display: none;
 }
 
 footer {
@@ -380,23 +381,26 @@ footer {
     z-index: 1;
 }
 
+/* --- CONFIGURAÇÕES PARA CELULAR --- */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
     }
 
     .container {
-        padding: 0 0.5rem; /* Reduzido levemente para dar mais espaço */
-        margin: 2rem auto;
-        width: 100% !important;
+        padding: 0 0.8rem;
+        margin: 1.5rem auto;
+        width: 100%;
     }
 
     .glass-card {
-        padding: 1rem; /* Reduzido o espaçamento interno do card */
+        padding: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .bloco-suave {
         padding: 1rem;
+        flex-direction: row;
     }
 
     .btn-prev {
@@ -408,18 +412,64 @@ footer {
     }
 
     .card-local {
-        min-width: 280px;
-        max-width: 280px;
+        min-width: 270px;
+        max-width: 270px;
     }
 
-    /* --- AJUSTES DO FORMULÁRIO MOBILE --- */
-    iframe,
-    form,
-    .form-container {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        box-sizing: border-box !important;
+    /* BLOQUEIA DEFINITIVAMENTE O IFRAME E SEUS ESTADOS NO MOBILE */
+    .form-container iframe,
+    .form-container:hover iframe,
+    .form-container:focus iframe {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        opacity: 0 !important;
+    }
+
+    /* LIMPA O CONTAINER DO FORMULÁRIO NO MOBILE */
+    .form-container,
+    .form-container:hover {
+        border: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* EXIBE O BLOCO DO BOTÃO NO CELULAR */
+    .form-mobile-link {
+        display: block;
+        text-align: center;
+        padding: 0.5rem 0 0;
+    }
+
+    /* ESTILIZAÇÃO DO BOTÃO COM A COR DOS TÍTULOS (#a9b23c) */
+    .btn-forms-mobile {
+        display: block;
+        width: 100%;
+        background-color: #a9b23c;
+        color: #121812;
+        padding: 1rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 700;
+        margin-top: 0.5rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        font-size: 1.05rem;
+        box-sizing: border-box;
+        border: 1px solid transparent;
+        outline: none !important;
+        -webkit-tap-highlight-color: transparent;
+        transition: all 0.3s ease;
+    }
+
+    /* EFEITO HOVER/CLIQUE COM BORDA ALARANJADA (#cc6600) */
+    .btn-forms-mobile:hover,
+    .btn-forms-mobile:active,
+    .btn-forms-mobile:focus {
+        background-color: #959f27;
+        border: 1px solid #cc6600 !important;
+        outline: none !important;
+        color: #ffffff;
+        box-shadow: 0 0 12px rgba(204, 102, 0, 0.4);
     }
 }
