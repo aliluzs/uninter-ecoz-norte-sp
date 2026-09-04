@@ -1,0 +1,413 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1f1a 0%, #090f0d 100%);
+    color: #e8efe8;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(107, 142, 35, 0.08),
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(204, 102, 0, 0.06),
+            transparent 40%
+        );
+    pointer-events: none;
+    z-index: 0;
+}
+
+header h1 .icone-header {
+    -webkit-text-fill-color: initial;
+    background: none;
+    margin-right: 0.4rem;
+}
+
+header {
+    text-align: center;
+    padding: 4rem 1rem 3rem;
+    background: linear-gradient(
+        180deg,
+        rgba(85, 107, 47, 0.2) 0%,
+        rgba(85, 107, 47, 0.05) 100%
+    );
+    border-bottom: 1px solid rgba(204, 102, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.logo-icone {
+    width: 80px;
+    height: 80px;
+    vertical-align: sub;
+    margin-right: 0.2rem;
+}
+
+/* --- TÍTULO PRINCIPAL (SORA) --- */
+header h1 {
+    font-family: "Sora", sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #787a46, #cfdb43);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+/* --- SUBTÍTULO DO HEADER (PLUS JAKARTA SANS) --- */
+header p {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: #e9e9db;
+    max-width: 680px;
+    margin: 0 auto;
+    letter-spacing: 0.2px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(107, 142, 35, 0.2);
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.bloco-suave {
+    background: linear-gradient(
+        135deg,
+        rgba(204, 102, 0, 0.05) 0%,
+        rgba(255, 255, 255, 0.01) 100%
+    ) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(204, 102, 0, 0.2) !important;
+    border-left: 4px solid #cc6600 !important;
+    border-radius: 14px;
+    padding: 1.5rem 1.8rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.bloco-suave:hover {
+    border-color: rgba(204, 102, 0, 0.35) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.alerta-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+.icone-bloco {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.alerta-content {
+    flex: 1;
+}
+
+/* --- TÍTULOS DOS BLOCOS SUAVES (LEXEND) --- */
+.bloco-suave h2 {
+    font-family: "Lexend", sans-serif;
+    color: #a9b23c;
+    margin-bottom: 0.4rem;
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+/* --- TEXTO DOS BLOCOS INFORMATIVOS (PLUS JAKARTA SANS) --- */
+.bloco-suave p {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1rem;
+    color: #d8e0d5;
+    line-height: 1.65;
+    letter-spacing: 0.2px;
+    font-weight: 400;
+}
+
+/* --- ESTRUTURA DO CARROSSEL --- */
+.carrossel-wrapper {
+    position: relative;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.carrossel-container {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0.5rem 0.2rem 1.5rem;
+    scrollbar-width: none;
+}
+
+.carrossel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.btn-carrossel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(18, 24, 18, 0.85);
+    border: 1px solid rgba(169, 178, 60, 0.5);
+    color: #a9b23c;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.btn-carrossel:hover {
+    background: #556b2f;
+    color: #fff;
+    border-color: #6b8e23;
+    box-shadow: 0 0 15px rgba(107, 142, 35, 0.6);
+}
+
+.btn-prev {
+    left: -20px;
+}
+
+.btn-next {
+    right: -20px;
+}
+
+/* --- CARDS DE ENDEREÇO --- */
+.card-local {
+    min-width: 320px;
+    max-width: 320px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-local::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #6b8e23, #cc6600);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-local:hover::before,
+.card-local.ativo::before {
+    opacity: 1;
+}
+
+.card-local:hover,
+.card-local.ativo {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    border-color: #cc6600;
+}
+
+/* --- TÍTULOS DOS CARDS (LEXEND) --- */
+.bairro-titulo {
+    font-family: "Lexend", sans-serif;
+    color: #a9b23c;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.estab-subtitulo {
+    font-family: "Lexend", sans-serif;
+    color: #cc6600;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.card-local p {
+    font-size: 0.88rem;
+    color: #e9e9db;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.4rem;
+}
+
+.aviso-clique {
+    margin-top: auto;
+    padding-top: 1rem;
+    font-size: 0.75rem;
+    color: #8cb380;
+    text-align: center;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* --- TÍTULO DA SEÇÃO MAPA (LEXEND) --- */
+.titulo-secao {
+    font-family: "Lexend", sans-serif;
+    color: #959f27;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.mapa-titulo {
+    color: #cc6600;
+}
+
+.titulo-secao::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        rgba(204, 102, 0, 0.3),
+        transparent
+    );
+    margin-left: 1rem;
+}
+
+.mapa-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.mapa-container iframe {
+    width: 100%;
+    height: 380px;
+    border: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mapa-container:hover iframe {
+    opacity: 0.95;
+}
+
+.form-container {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+    border: 1px dashed rgba(204, 102, 0, 0.4);
+    text-align: center;
+    border-radius: 12px;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.form-container:hover {
+    background: rgba(0, 0, 0, 0.35);
+    border-style: solid;
+}
+
+/* --- ESCURECIMENTO HARMONIOSO DO GOOGLE FORMS --- */
+.form-container iframe {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    /* Inverte as cores e ajusta o contraste/matiz para combinar com o Dark Mode */
+    filter: invert(90%) hue-rotate(180deg) brightness(0.95) contrast(90%);
+    transition: filter 0.3s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    font-size: 0.85rem;
+    color: #8cb380;
+    border-top: 1px solid rgba(107, 142, 35, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+        margin: 2rem auto;
+    }
+
+    .glass-card {
+        padding: 1.5rem;
+    }
+
+    .bloco-suave {
+        padding: 1.2rem;
+    }
+
+    .btn-prev {
+        left: -10px;
+    }
+
+    .btn-next {
+        right: -10px;
+    }
+
+    .card-local {
+        min-width: 280px;
+        max-width: 280px;
+    }
+}

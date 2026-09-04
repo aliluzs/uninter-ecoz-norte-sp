@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EcoZ Norte SP - Descarte Consciente</title>
+
+        <!-- Importação das Fontes Google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lexend:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Sora:wght@700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Arquivo CSS Externo -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>
+                <img
+                    src="img/logo-monitor-svgrepo-com.svg"
+                    alt="Ícone EcoZ"
+                    class="logo-icone"
+                />
+                EcoZ-Norte SP
+            </h1>
+            <p>
+                Guia de Descarte Eletrônico Consciente para Santana, Tucuruvi e
+                Região
+            </p>
+        </header>
+
+        <div class="container">
+            <!-- Bloco 1: Introdução de Alerta -->
+            <div class="bloco-suave">
+                <div class="alerta-icon">
+                    <img
+                        src="img/lixo-garbage-svgrepo-com.svg"
+                        alt="Ícone Lixo Eletrônico"
+                        class="icone-bloco"
+                    />
+                </div>
+                <div class="alerta-content">
+                    <h2>Por que NÃO jogar lixo eletrônico no lixo comum?</h2>
+                    <p>
+                        Equipamentos como pilhas, baterias, monitores e
+                        celulares contêm metais pesados (chumbo, mercúrio e
+                        cádmio). Quando descartados incorretamente, eles
+                        contaminam o solo e os lençóis freáticos da nossa
+                        cidade. A reciclagem correta permite reaproveitar mais
+                        de 80% dos materiais!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bloco 2: Título p/ indicar endereços -->
+            <div class="bloco-suave">
+                <div class="alerta-icon">
+                    <img
+                        src="img/descarte-plug-svgrepo-com.svg"
+                        alt="Ícone Descarte Consciente"
+                        class="icone-bloco"
+                    />
+                </div>
+                <div class="alerta-content">
+                    <h2>Seu descarte consciente começa aqui.</h2>
+                    <p>
+                        Encontre pontos oficiais de coleta e ecopontos
+                        especializados em resíduos eletrônicos para a Zona Norte
+                        de São Paulo:
+                    </p>
+                </div>
+            </div>
+
+            <!-- CARROSSEL DE ENDEREÇOS (11 PONTOS REORDENADOS) -->
+            <div class="carrossel-wrapper">
+                <button class="btn-carrossel btn-prev" id="btnPrev">❮</button>
+
+                <div class="carrossel-container" id="carrossel">
+                    <!-- Card 1 -->
+                    <div
+                        class="glass-card card-local ativo"
+                        data-nome="Santana (Zaki Narchi)"
+                        data-mapa="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.3378393526693!2d-46.6210086!3d-23.5023605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58807d91d17d%3A0x6b86290886c9d78d!2sAv.%20Zaki%20Narchi%2C%20375%20-%20Vila%20Guilherme%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002029-000!5e0!3m2!1spt-BR!2sbr"
+                    >
+                        <div class="bairro-titulo">Santana</div>
+                        <div class="estab-subtitulo">Ecoponto Zaki Narchi</div>
+                        <p>📍 Av. Zaki Narchi, 375 - Carandiru</p>
+                        <p>🕐 Seg a Sáb: 06h às 22h | Dom: 06h às 18h</p>
+                        <div class="aviso-clique">
+                            clique para localizar no mapa abaixo
+                        </div>
+                    </div>
+
+                    <!-- Card 2 (Tucuruvi) -->
+                    <div
+                        class="glass-card card-local"
+                        data-nome="Tucuruvi (Ecoponto Tucuruvi)"
+                        data-mapa="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.3900910237937!2d-46.5985112!3d-23.4644265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef73fbe656df9%3A0xdca35a725aa2e979!2sR.%20Eduardo%20Vicente%20Nasser%2C%20519%20-%20Jardim%20Leonor%20Mendes%20de%20Barros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002344-050!5e0!3m2!1spt-BR!2sbr"
+                    >
+                        <div class="bairro-titulo">Tucuruvi</div>
+                        <div class="estab-subtitulo">Ecoponto Tucuruvi</div>
+                        <p>📍 R. Eduardo Vicente Nasser, 519</p>
+                        <p>🕐 Seg a Sáb: 06h às 22h | Dom: 06h às 18h</p>
+                        <div class="aviso-clique">
+                            clique para localizar no mapa abaixo
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="glass-card card-local"
+                        data-nome="Vila Maria (Ecobraz Emigre)"
+                        data-mapa="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.628469396349!2d-46.5772398!3d-23.4918882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5fe22b51cb59%3A0x464bf26b38467ed8!2sR.%20Dona%20Maria%20Quedas%2C%20230%20-%20Jardim%20Andarai%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002175-010!5e0!3m2!1spt-BR!2sbr"
+                    >
+                        <div class="bairro-titulo">Vila Maria</div>
+                        <div class="estab-subtitulo">Ecobraz Emigre</div>
+                        <p>📍 R. Dona Maria Quedas, 230 - Jardim Andarai</p>
+                        <p>🕐 Seg a Sáb: 08h às 17h</p>
+                        <div class="aviso-clique">
+                            clique para localizar no mapa abaixo
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="glass-card card-local"
+                        data-nome="Vila Maria (Tech Eco)"
+                        data-mapa="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.423981881729!2d-46.5912411!3d-23.4992562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58bfb36d0611%3A0xa61a70519bfb7324!2sR.%20Eli%2C%20190%20-%20Vila%20Maria%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002114-010!5e0!3m2!1spt-BR!2sbr"
+                    >
+                        <div class="bairro-titulo">Vila Maria</div>
+                        <div class="estab-subtitulo">Tech Eco</div>
+                        <p>📍 R. Eli, 190 - Vila Maria</p>
+                        <p>🕐 Seg a Sáb: 08h às 17h</p>
+                        <div class="aviso-clique">
+                            clique para localizar no mapa abaixo
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <!-- Card Ecodigital -->
+                    <div
+                        class="glass-card card-local"
+                        data-nome="Vila Maria (Ecodigital)"
+                        data-mapa="https://maps.google.com/maps?q=Pra%C3%A7a%20Joaquim%20Jos%C3%A9%20da%20Nova%2C%2049%20-%20Vila%20Maria%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002126-000&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                    >
+                        <div class="bairro-titulo">Vila Maria</div>
+                        <div class="estab-subtitulo">Ecodigital</div>
+                        <p>📍 Pça. Joaquim José da Nova, 49 – Vila Maria</p>
+                        <p>🕐 Seg a Sáb: 08h às 17h</p>
+                        <div class="aviso-clique">
+                            clique para localizar no mapa abaixo
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div
+                        class="glass-card card-local"
+                        data-nome="Lauzane Paulista (Estação Reciclar)"
+                        data-mapa="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.186851239841!2d-46.6432001!3d-23.4717551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef748ef53d9e3%3A0xc3457a16d8a34241!2sR.%20Vaud%2C%20205%20-%20Lauzane%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002443-060!5e0!3m2!1spt-BR!2sbr"
+                    >
+                        <div class="bairro-titulo">Lauzane Paulista</div>
+                        <div class="estab-subtitulo">Estação Reciclar</div>
+                        <p>📍 R. Vaud, 205 - Lauzane Paulista</p>
+                        <p>🕐 Seg a Sáb: 08h às 17h</p>
+                        <div class="aviso-clique">
+                            clique para localizar no mapa abaixo
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div
+                        class="glass-card card-local"
+                        data-nome="Casa Verde (Coopermiti)"
+                        data-mapa="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.058319688414!2d-46.6617308!3d-23.5124436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58032b4b3b1d%3A0xb3a02bb804cb7d8e!2sR.%20Jo%C3%A3o%20Rudge%2C%20366%20-%20Casa%20Verde%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002513-020!5e0!3m2!1spt-BR!2sbr"
+                    >
+                        <div class="bairro-titulo">Casa Verde</div>
+                        <div class="estab-subtitulo">Coopermiti</div>
+                        <p>📍 R. João Rudge, 366 - Casa Verde</p>
+                        <p>🕐 Seg a Sáb: 08h às 17h</p>
+                        <div class="aviso-clique">
+                            clique para localizar no mapa abaixo
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div
+                        class="glass-card card-local"
+                        data-nome="Freguesia do Ó (Reciclo Info Sales)"
+                        data-mapa="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.396593820295!2d-46.6918381!3d-23.5002425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef836c2e36b8f%3A0x6739be6e50774a3b!2sR.%20Ot%C3%A1vio%20de%20Moura%2C%2063%20-%20Vila%20Carolina%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002724-000!5e0!3m2!1spt-BR!2sbr"
+                    >
+                        <div class="bairro-titulo">Freguesia do Ó</div>
+                        <div class="estab-subtitulo">Reciclo Info Sales</div>
+                        <p>📍 R. Otávio de Moura, 63 - Vila Carolina</p>
+                        <p>🕐 Seg a Sáb: 08h às 17h</p>
+                        <div class="aviso-clique">
+                            clique para localizar no mapa abaixo
+                        </div>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div
+                        class="glass-card card-local"
+                        data-nome="Vila Guilherme (Ecoponto Vila Guilherme)"
+                        data-mapa="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.3308899818863!2d-46.6112001!3d-23.502611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58866127bc0f%3A0xe7a5a8fbc8a9b69b!2sR.%20Jos%C3%A9%20Bernardo%20Pinto%2C%201480%20-%20Vila%20Guilherme%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002055-001!5e0!3m2!1spt-BR!2sbr"
+                    >
+                        <div class="bairro-titulo">Vila Guilherme</div>
+                        <div class="estab-subtitulo">
+                            Ecoponto Vila Guilherme
+                        </div>
+                        <p>📍 Rua José Bernardo Pinto, 1480</p>
+                        <p>🕐 Seg a Sáb: 06h às 22h | Dom: 06h às 18h</p>
+                        <div class="aviso-clique">
+                            clique para localizar no mapa abaixo
+                        </div>
+                    </div>
+
+                    <!-- Card 10 -->
+                    <div
+                        class="glass-card card-local"
+                        data-nome="Vila Nivi (Recieletro)"
+                        data-mapa="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.1328901842847!2d-46.5823101!3d-23.4737015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef72c5be3e731%3A0x6a2eb084db919ff7!2sR.%20Cometa%2C%20156%20-%20Vila%20Nivi%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002255-090!5e0!3m2!1spt-BR!2sbr"
+                    >
+                        <div class="bairro-titulo">Vila Nivi</div>
+                        <div class="estab-subtitulo">Recieletro</div>
+                        <p>📍 R. Cometa, 156 - Vila Nivi</p>
+                        <p>🕐 Seg a Sáb: 06h às 22h | Dom: 06h às 18h</p>
+                        <div class="aviso-clique">
+                            clique para localizar no mapa abaixo
+                        </div>
+                    </div>
+
+                    <!-- Card 11 -->
+                    <div
+                        class="glass-card card-local"
+                        data-nome="Limão (Ecoponto Parque Peruche)"
+                        data-mapa="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.2618912384915!2d-46.6628101!3d-23.5050982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce581aa92a101b%3A0x4a4347cfb0a8801f!2sAv.%20Eng.%20Caetano%20%C3%81lvares%2C%203142%20-%20Lim%C3%A3o%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002535-008!5e0!3m2!1spt-BR!2sbr"
+                    >
+                        <div class="bairro-titulo">Limão</div>
+                        <div class="estab-subtitulo">
+                            Ecoponto Parque Peruche
+                        </div>
+                        <p>📍 Av. Eng. Caetano Álvares, 3142</p>
+                        <p>🕐 Seg a Sáb: 06h às 22h | Dom: 06h às 18h</p>
+                        <div class="aviso-clique">
+                            clique para localizar no mapa abaixo
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-carrossel btn-next" id="btnNext">❯</button>
+            </div>
+
+            <!-- Bloco de Mapa -->
+            <div class="glass-card" id="secao-mapa">
+                <h2 class="titulo-secao">
+                    📍 Localização no Mapa:
+                    <span class="mapa-titulo" id="nomeLocalMapa"
+                        >Santana (Zaki Narchi)</span
+                    >
+                </h2>
+                <div class="mapa-container">
+                    <iframe
+                        id="iframeMapa"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.3378393526693!2d-46.6210086!3d-23.5023605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58807d91d17d%3A0x6b86290886c9d78d!2sAv.%20Zaki%20Narchi%2C%20375%20-%20Vila%20Guilherme%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002029-000!5e0!3m2!1spt-BR!2sbr"
+                        loading="lazy"
+                    ></iframe>
+                </div>
+            </div>
+
+            <!-- Bloco 4: Validação/Formulário -->
+            <div class="bloco-suave">
+                <div class="alerta-icon">
+                    <img
+                        src="img/validacao-ipad-hand-svgrepo-com.svg"
+                        alt="Ícone Validação"
+                        class="icone-bloco"
+                    />
+                </div>
+                <div class="alerta-content">
+                    <h2>Validação da Comunidade da ZN</h2>
+                    <p>
+                        Sua resposta anônima ajuda a comprovar a utilidade deste
+                        guia para a disciplina de ADS da Uninter:
+                    </p>
+                    <div class="form-container">
+                        <iframe
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSfyTeFxnQNL8l3Kp-dHFLy-keXOF7qidA-YYzphobAb8xsUIg/viewform?embedded=true"
+                            width="100%"
+                            height="1200"
+                            frameborder="0"
+                            marginheight="0"
+                            marginwidth="0"
+                            style="border: none; border-radius: 8px"
+                        >
+                            Carregando…
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>
+                Projeto Extensionista de Tecnologia — CST Análise e
+                Desenvolvimento de Sistemas (Uninter)
+            </p>
+        </footer>
+
+        <!-- VÍNCULO COM O ARQUIVO JAVASCRIPT -->
+        <script src="script.js"></script>
+    </body>
+</html>
